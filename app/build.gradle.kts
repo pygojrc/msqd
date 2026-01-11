@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.ir.backend.js.compile
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -28,21 +30,26 @@ android {
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
-    }
+        targetCompatibility = JavaVersion.VERSION_11    }
     kotlinOptions {
         jvmTarget = "11"
     }
+    buildToolsVersion = "36.1.0"
+    ndkVersion = "29.0.14033849 rc4"
 }
 
 dependencies {
+    // Source: https://mvnrepository.com/artifact/org.java-websocket/Java-WebSocket
+    implementation("org.java-websocket:Java-WebSocket:1.6.0")
 
     implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
+//    compileOnly(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(files("..\\lib\\gson.jar"))
-    implementation(files("..\\lib\\qd_439.jar"))
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
+    // Source: https://mvnrepository.com/artifact/com.google.code.gson/gson
+//    implementation(libs.gson)
+    compileOnly(files("..\\lib\\qd_440.jar"))
+//    testImplementation(libs.junit)
+//    androidTestImplementation(libs.androidx.junit)
+//    androidTestImplementation(libs.androidx.espresso.core)
 }
