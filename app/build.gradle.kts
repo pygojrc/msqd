@@ -48,7 +48,7 @@ dependencies {
     implementation(files("..\\lib\\gson.jar"))
     // Source: https://mvnrepository.com/artifact/com.google.code.gson/gson
 //    implementation(libs.gson)
-    compileOnly(files("..\\lib\\qd_440.jar"))
+    compileOnly(files("..\\lib\\qd_443.jar"))
 //    testImplementation(libs.junit)
 //    androidTestImplementation(libs.androidx.junit)
 //    androidTestImplementation(libs.androidx.espresso.core)

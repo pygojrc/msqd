@@ -34,7 +34,7 @@ public class Tools {
 
     private static Application app = null;
 
-    //  440 修改处理之
+    //  440/443 修改处理之
     //  类：包含 okhttp_request_QDHttpClient 的 com.qidian.QDReader.framework.network.qd.QDHttpClient
     //  var QDHttpClientJudian = Java.use('com.qidian.QDReader.framework.network.qd.QDHttpClient$judian')
     //  Get
@@ -43,10 +43,12 @@ public class Tools {
     public static QDHttpClient QDHttpClient = new QDHttpClient.judian().judian();
 
     public static QDHttpResp qdGet(String url) {
+        // 比对签名  443 QDHttpResp i(String var1)
         return QDHttpClient.j(url);
     }
 
     public static QDHttpResp qdPost(String url, ContentValues contentValues) {
+        // 比对签名  443 QDHttpResp n(String str, ContentValues contentValues)
         return QDHttpClient.o(url, contentValues);
     }
 

@@ -22,13 +22,13 @@ public class HGetChapterContent implements GoHandle {
         }
         ChapterContentHandler chapterContentHandler = new ChapterContentHandler(bookId, chapterId);
         // 包含 下载vip章节内容接口失败 mQDBookId:
-        // 440 com.qidian.QDReader.component.bll.v
+        // 443 com.qidian.QDReader.component.bll.v
         com.qidian.QDReader.component.bll.v sObj = new com.qidian.QDReader.component.bll.v(source, bookId, chapterId, false, false, "", chapterContentHandler);
         // 包含 downloadContent threadPool rejected: isTerminating
-        // 440 F
+        // 443 F
         sObj.F();
-        // 带 ReaderThreadPool 和 submit,无参，无字符串的方法
-        // 440 O
+        // 带 ReaderThreadPool 和 submit,无参且无字符串的方法
+        // 440 O 443 N
         // sObj.O();
         StringBuilder errorMsg = new StringBuilder();
         for (int i = 0; i < 9999; i++) {

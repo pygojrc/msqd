@@ -35,7 +35,7 @@ public class HInfo implements GoHandle {
 
             // BU#MODEL
             // 包含 TM#G_SIM_SE_NUM is Really Call System API
-            // 440 com.qidian.QDReader.qmethod.pandoraex.monitor.d
+            // 443 com.qidian.QDReader.qmethod.pandoraex.monitor.d
             JsonObject jsonObject = new JsonObject();
             goGoMessage.put("环境信息", jsonObject);
             Context context = Objects.requireNonNull(Tools.getApplication()).getApplicationContext();
@@ -60,7 +60,7 @@ public class HInfo implements GoHandle {
             jsonObject.addProperty("TM#G_DID#I_1_imei2_release", com.qidian.QDReader.qmethod.pandoraex.monitor.d.cihai(telephonyManager, 1));
 
             // 带 so load fail,error info :%s
-            // 440 com.ola.star.uin.U
+            // 443 com.ola.star.uin.U
             JsonObject uJson = new JsonObject();
             goGoMessage.put("设备信息", uJson);
             uJson.addProperty("a", U.a());
